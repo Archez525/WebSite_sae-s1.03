@@ -1,0 +1,172 @@
+/* Importation des polices depuis Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap");
+
+/* Style global du corps de la page */
+body {
+  /* Définition de la police principale */
+  font-family: "Source Sans Pro", sans-serif;
+  /* Hauteur de ligne pour une meilleure lisibilité */
+  line-height: 1.6;
+  /* Couleur du texte principal */
+  color: #433422;
+  /* Couleur de fond douce pour le confort visuel */
+  background-color: #fdfbf7;
+}
+
+/* Style des titres principaux */
+h1,
+h2,
+h3 {
+  /* Utilisation de la police Playfair Display pour les titres */
+  font-family: "Playfair Display", serif;
+  /* Espacement au-dessus et en dessous des titres */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Style de la barre de navigation */
+.barre-navigation {
+  /* Espacement interne */
+  padding: 1.5rem 0;
+  /* Marges pour l'espacement externe */
+  margin: 1rem 2rem;
+  /* Coins arrondis */
+  border-radius: 1rem;
+  /* Couleur de fond claire */
+  background-color: #f5efe6 !important;
+  /* Couleur de la bordure */
+  border-color: #e8d9c5 !important;
+}
+
+/* Style des éléments de menu */
+.menu {
+  /* Suppression des bordures par défaut */
+  border: none;
+  /* Fond transparent par défaut */
+  background: transparent;
+  /* Espacement interne */
+  padding: 0.5rem;
+  /* Coins arrondis */
+  border-radius: 0.5rem;
+  /* Transition douce pour le changement de couleur */
+  transition: background-color 0.2s;
+}
+
+/* Style au survol des éléments de menu */
+.menu:hover {
+  /* Changement de couleur de fond au survol */
+  background-color: #e8d9c5;
+}
+
+/* Style de l'entête */
+.entete {
+  /* Couleur de fond douce */
+  background-color: #f5efe6;
+  /* Espacement interne généreux */
+  padding: 3rem 0;
+}
+
+/* Style du titre principal */
+.titre-principal {
+  /* Taille de police importante pour le titre principal */
+  font-size: 3.8rem;
+  /* Police en gras */
+  font-weight: 700;
+  /* Couleur du texte */
+  color: #2c1810;
+  /* Espacement entre les lettres */
+  letter-spacing: -0.02em;
+  /* Hauteur de ligne réduite pour le titre */
+  line-height: 1.2;
+  /* Ombre légère pour le texte */
+  text-shadow: 2px 2px 4px rgba(44, 24, 16, 0.1);
+  /* Utilisation de la police Playfair Display */
+  font-family: "Playfair Display", serif;
+}
+
+/* Style du conteneur principal */
+main.contenu-principale {
+  /* Couleur de fond blanche */
+  background-color: #fff;
+  /* Bordure légère */
+  border: 1px solid #e8d9c5;
+  /* Coins arrondis */
+  border-radius: 1rem;
+  /* Marges pour centrage */
+  margin: 2rem auto;
+  /* Espacement interne */
+  padding: 2rem;
+  /* Ombre légère pour effet de profondeur */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Style des articles */
+.contenu-article {
+  /* Taille de police pour le texte de l'article */
+  font-size: 1.2rem;
+  /* Hauteur de ligne augmentée pour la lisibilité */
+  line-height: 1.8;
+  /* Couleur du texte */
+  color: #433422;
+}
+
+/* Espacement des paragraphes dans les articles */
+.contenu-article p {
+  margin-bottom: 1.5rem;
+}
+
+/* Style des sous-titres dans les articles */
+.contenu-article h2 {
+  /* Taille de police augmentée pour les sous-titres */
+  font-size: 2rem;
+  /* Couleur du texte */
+  color: #2c1810;
+  /* Espacement au-dessus pour séparation */
+  margin-top: 2.5rem;
+  /* Utilisation de la police Playfair Display */
+  font-family: "Playfair Display", serif;
+}
+
+/* Espacement des listes dans les articles */
+.contenu-article ul {
+  margin-bottom: 1.5rem;
+}
+
+/* Espacement des éléments de liste */
+.contenu-article li {
+  margin-bottom: 0.5rem;
+}
+
+/* Style pour le texte en code */
+code {
+  /* Utilisation d'une couleur de contraste maximum */
+  color: color-yiq(#e8d9c5);
+}
+
+/* Style des badges */
+.badge {
+  /* Police normale pour les badges */
+  font-weight: normal;
+  /* Espacement interne des badges */
+  padding: 0.5rem 1rem;
+  /* Couleur de fond des badges */
+  background-color: #e8d9c5 !important;
+  /* Couleur du texte des badges */
+  color: #2c1810 !important;
+}
+
+/* Style des images */
+img {
+  /* Largeur maximale de l'image pour qu'elle ne dépasse pas son conteneur */
+  max-width: 100%;
+  /* Maintien des proportions de l'image */
+  height: auto;
+}
+
+/* Style pour les petits écrans (responsiveness) */
+@media (max-width: 768px) {
+  /* Ajustement de la taille du titre principal sur petits écrans */
+  .titre-principal {
+    font-size: 2.5rem;
+  }
+}

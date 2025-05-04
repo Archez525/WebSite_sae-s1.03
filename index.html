@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rapport SAE S1.03</title>
+    <!-- Intégration de Bootstrap pour le style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Fichier de style personnalisé -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Barre de navigation utilisant le composant Navbar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border barre-navigation">
+      <div class="container">
+        <a class="navbar-brand fw-bold">SAE S1.03</a>
+        <button class="menu d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Rapport</a>
+            </li>
+            <li nav="nav-item">
+              <a class="nav-link" href="questions.html">Questions</a>
+            </li>
+            <li nav="nav-item">
+              <a class="nav-link" href="organisation.html">Organisation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- En-tête du blog -->
+    <header class="entete py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <h1 class="titre-principal mb-4">Rapport Système</h1>
+            <div class="d-flex align-items-center mb-4">
+              <img src="assets/pp.png" class="rounded-circle me-2" alt="Auteurs" />
+              <div>
+                <div class="fw-bold">Groupe 01, Binôme 03</div>
+                <div class="text-muted">Janvier 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="contenu-principale container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <img src="assets/banner.jpg" class="img-fluid mb-4 rounded" alt="Bannière" />
+
+          <article class="contenu-article">
+            <h3 id="installation">1. Installation de VirtualBox</h2>
+            <p>Téléchargez et installez VirtualBox sur votre PC.</p>
+
+            <h3>Téléchargement de l'image ISO</h3>
+            <p>
+              Téléchargez une image ISO de Debian à partir du site officiel :
+              <a href="https://www.debian.org/distrib/netinst">Debian Netinst</a>.
+            </p>
+            <img src="assets/installer-debian.png" class="img-fluid mb-4 rounded" alt="Installer Debian" />
+
+            <h3 id="creation">2. Création d'une machine virtuelle</h3>
+            <ul>
+              <li>Lancez VirtualBox et cliquez sur « Nouvelle » pour créer une machine virtuelle.</li>
+            </ul>
+            <img src="assets/lancement-virtualbox.png" class="img-fluid mb-4 rounded" alt="Lancer VirtualBox" />
+            <ul>
+              <li>Suivez les étapes pour nommer la machine et associer le fichier ISO.</li>
+            </ul>
+            <img src="assets/etapes.png" class="img-fluid mb-4 rounded" alt="Suivre les étapes" />
+            <ul>
+              <li>Allouez 3001 Mo de RAM et 2 CPU.</li>
+            </ul>
+            <img src="assets/configuration-hardware.png" class="img-fluid mb-4 rounded" alt="Configuration de l'hardware" />
+            <ul>
+              <li>Choisissez la taille du disque dur, ici 25.94 Go.</li>
+            </ul>
+            <img src="assets/configurer-disque-dur.png" class="img-fluid mb-4 rounded" alt="Configuration de la taille du disque dur" />
+            <p>Le récapitulatif des informations :</p>
+            <img src="assets/recapitulatif.png" class="img-fluid mb-4 rounded" alt="Récapitulatif" />
+            <ul>
+              <li>Il ne reste plus qu’à démarrer la machine en appuyant sur « Démarrer ».</li>
+            </ul>
+            <img src="assets/demarrer.png" class="img-fluid mb-4 rounded" alt="Démarrer" />
+            <p>
+              Une fois la machine lancée, divers onglets vont apparaître afin de finir la configuration de la machine, ces onglets porteront principalement sur la configuration de la langue, du compte admin, des mots de passe, etc. Il faudra simplement suivre les étapes demandées.
+            </p>
+
+            <h3 id="configuration">3. Configuration de la machine</h3>
+            <ol>
+              <li>Le premier est pour savoir si on veut une interface graphique ou pas sur Debian.</li>
+              <img src="assets/installation-graphique.png" class="img-fluid mb-4 rounded" alt="Installation Graphique" />
+              <li>Les étapes à suivre pour la configuration, on commence par la situation géographique, pour l'heure, le format de la date, la langue, nous somme en France, donc nous mettons: "France".</li>
+              <img src="assets/etapes-configuration.png" class="img-fluid mb-4 rounded" alt="Étapes configuration" />
+              <li>Configurer de la disposition du clavier, AZERTY pour nous.</li>
+              <img src="assets/configuration-clavier.png" class="img-fluid mb-4 rounded" alt="Configuration clavier" />
+              <li>Configuration de l'hostname, nom de la machine. Nous avons choisi "vbox" car nous utilisons VirtualBox, mais on pourrait choisir un autre nom de machine.</li>
+              <img src="assets/configuration-reseau.png" class="img-fluid mb-4 rounded" alt="Configuration réseau" />
+              <li>Configuration du mot de passe du compte "root", l'administrateur sur les systèmes UNIX :</li>
+              <img src="assets/mot-de-passe.png" class="img-fluid mb-4 rounded" alt="Mot de passe" />
+              <li>Configuration d'un nouvel utilisateur, comme demandé dans le sujet, nous choisissons <code>admin_Gr01_Binome03</code>:</li>
+              <img src="assets/utilisateurs.png" class="img-fluid mb-4 rounded" alt="Utilisateur" />
+              <li>Configuration du mot de passe  de cet utilisateur:</li>
+              <img src="assets/config-mot-de-passe-utilisateur.png" class="img-fluid mb-4 rounded" alt="Configuration mot de passe utilisateurs" />
+              <li>Choix de l'environnement de bureau, nous avons laissé GNOME par défaut, et avons oublié de prendre une capture d'écran.</li>
+            </ol>
+            <p>Une fois la configuration et l’installation terminées, il ne reste plus qu’à entrer le mot de passe et profiter de la machine.</p>
+            <img src="assets/connection-gnome.png" class="img-fluid mb-4 rounded" alt="Connexion GNOME" />
+            <p>Il ne reste plus qu’à ouvrir le terminal pour entrer des commandes.</p>
+            <img src="assets/terminal.png" class="img-fluid mb-4 rounded" alt="Terminal" />
+            <h3 id="adduser">4. Addusers et addgroup</h3>
+            <ol>
+              <li>
+                Pour créer un groupe, vous devez utiliser la commande <code>addgroup</code> dans le terminal.
+                Cependant, vous pourriez rencontrer une erreur indiquant que la commande est introuvable.
+                Cela s'explique par le fait que notre utilisateur <code>admin_gr01_binome03</code> n'est pas administrateur.
+                Pour remédier à ce problème, nous pouvons utiliser la commande <code>sudo</code>, sur Linux, afin d'obtenir les droits super-utilisateur pour une commande, c'est-à-dire se substituer à l'utilisateur pour exécuter une commande.
+                Par défaut, l'utilisateur est le <code>root</code>. Nous pouvons aussi utiliser la commande <code>su "utilisateur"</code> afin de changer d'utilisateur.
+                Par défaut, on n'a pas besoin de spécifier l'utilisateur si on veut juste passer à l'utilisateur <code>root</code> sur un système Unix.
+              </li>
+              <li>
+                En exécutant les commandes <code>adduser</code> ou <code>addgroup</code> avec <code>sudo</code>, vous pourriez rencontrer une autre erreur : l'utilisateur par défaut n'a pas le droit d'exécuter cette commande.
+                Il faut donc modifier le fichier <code>/etc/sudoers</code> et ajouter notre utilisateur :
+                <code>admin_gr01_binome03 ALL=(ALL:ALL) ALL</code> à la fin de ce fichier.
+                Nous avons réussi à comprendre cette erreur à l'aide de la documentation de l'entreprise nommée "RedHat", très connue dans l'administration système.
+                <a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/configuring_basic_system_settings/managing-sudo-access_configuring-basic-system-settings#proc_configuring-sudo-privileges_managing-sudo-access">Lire la documentation.</a></li>
+            <li>Ensuite lorsque les problèmes seront réglés. Un groupe nommé “Binome01” avec l’ID 123 a été créé. Pour ce faire, l’option --system a été utilisée afin de créer un groupe de manière dynamique. De plus, l’option --allow-bad-names a été nécessaire, car le système indiquait que le nom du groupe ne respectait pas les conventions de nommage habituelles.</li>
+            <img src="assets/addgroup-et-adduser.png" class="img-fluid mb-4 rounded" alt="Terminal" />
+            <img src="assets/addgroup-suite.png" class="img-fluid mb-4 rounded" alt="Addgroup" />
+            <li>Pour créer deux utilisateurs, la commande adduser a été utilisée avec des options similaires que pour créer les groupes. Ainsi, deux utilisateurs ont été créés à l’aide de la commande suivante :
+                <code>sudo adduser --system --allow-bad-names --gid 123 Binome01_1(2)</code>.
+                Il est important de préciser « gid 123 » afin d’ajouter les utilisateurs dans le groupe créé précédemment.</li>
+            <img src="assets/adduser.png" class="img-fluid mb-4 rounded" alt="Adduser" />
+        </ol>
+        <h3 id="prompt">5. Personnalisation d’une commande prompt</h3>
+        <p>Avant de personnaliser un prompt, il est important de définir ce que c’est. Une commande prompt correspond au texte qui apparaît au début de chaque ligne dans un terminal, avant que vous ne saisissiez une commande. Ce texte se trouve juste avant le signe dollar. Par exemple, sur l’image, c’est le texte affiché en vert.</p>
+        <img src="assets/explication-prompt.png" class="img-fluid mb-4 rounded" alt="Explication prompt" />
+        <b>Que peut indiquer une commande prompt?</b>
+        <p>La commande prompt peut fournir diverses informations. Dans notre cas, elle affiche le nom de l’utilisateur ainsi que celui de l’hôte.</p>
+        <p>Il est également possible de stocker la valeur de cette commande dans une variable, par exemple <code>"DEFAULT"</code>. Cela permet de récupérer la commande initiale ultérieurement, comme illustré ci-dessous.</p>
+        <img src="assets/prompt-nom-utilisateur.png" class="img-fluid mb-4 rounded" alt="Prompt nom utilisateur" />
+        <p>Pour afficher seulement le nom de l’utilisateur dans le prompt, il suffit de modifier la valeur de la variable correspondante et de remplacer par <code>\u</code>.</p>
+        <p>Cependant, on voudrait ajouter plus d’informations au prompt afin d’avoir une meilleure visibilité car actuellement, seul le nom d’utilisateur apparaît dans la commande prompt. Ainsi, il serait plus pratique d’inclure des informations supplémentaires comme:</p>
+        <ul>
+            <li>Le répertoire de travail actuel.</li>
+            <li>Un indicateur pour savoir si l’utilisateur est un utilisateur normal ou root.</li>
+            <li>Une séparation claire entre la commande prompt et les commandes exécutées pour une meilleure lisibilité car les deux sont actuellement collées.</li>
+        </ul>
+        <p>Pour ajouter ces détails, il faut modifier la valeur de la variable <code>PS1</code> en utilisant : <code>\u:\w\$</code> car <code>\u</code> affiche le nom de l’utilisateur en cours, <code>\w</code> indique le répertoire de travail actuel. Si le répertoire est long, il affiche un chemin abrégé avec <code>~</code> pour représenter le répertoire personnel et enfin <code>\$</code> affiche le symbole <code>$</code> pour un utilisateur normal ou <code>#</code> pour l’utilisateur <code>root</code>.</p>
+        <p>Ainsi on retrouve:</p>
+        <img src="assets/ps1-modif.png" class="img-fluid mb-4 rounded" alt="PS1 modification" />
+        <p>Pour avoir une commande avec de la couleur, il faut modifier la valeur de cette manière, ici la couleur sera rouge : <code>‘\[\033[01;31m\]\u:\w\$’</code>.
+            Au final, on obtient le prompt suivant qui est personnalisé et qui nous donne pas mal d’informations :</p>
+        <img src="assets/invite-perso.png" class="img-fluid mb-4 rounded" alt="Invite perso" />
+
+        <!-- Ajout de la section pour l'installation de NGINX et le déploiement du site -->
+        <article class="contenu-article">
+          <h3 id="nginx-installation">6. Installation et Configuration de NGINX</h3>
+          <p>Pour installer NGINX sur notre machine Debian, nous devons suivre les étapes suivantes :</p>
+          <ol>
+              <li>Mettre à jour la liste des paquets disponibles :</li>
+              <pre><code>sudo apt update</code></pre>
+              <li>Installer NGINX :</li>
+              <pre><code>sudo apt install nginx</code></pre>
+              <img src="assets/nginx-installation.png" class="img-fluid mb-4 rounded" alt="Installation de NGINX" />
+              <li>Démarrer le service NGINX :</li>
+              <pre><code>sudo systemctl start nginx</code></pre>
+              <li>Vérifier que NGINX fonctionne en accédant à l'adresse <code>http://localhost</code> dans un navigateur :</li>
+              <img src="assets/systemctl.png" class="img-fluid mb-4 rounded" alt="Lancement de NGINX" />
+              <img src="assets/nginx-page.png" class="img-fluid mb-4 rounded" alt="Page par défaut de NGINX" />
+          </ol>
+          <h3 id="site-deployment">7. Déploiement du Site</h3>
+          <p>Pour déployer notre site web, nous avons choisi d'utiliser SCP (Secure Copy Protocol) car nous n'avons pas de licence WebStorm, et c'est infiniment plus simple. Pour simplifier le processus, nous allons configurer le fichier <code>~/.ssh/config</code> avec un nom (demosrv) et notre clé privée pour une connexion facile. Voici les étapes pour déployer notre site :</p>
+          <ol>
+              <li>Configurer le fichier <code>~/.ssh/config</code> avec l'IP de votre serveur, pour nous c'est 192.158.1.20:</li>
+              <pre><code>
+Host demosrv
+    HostName 192.168.1.20
+    User root
+    IdentityFile ~/.ssh/id_ed25519
+              </code></pre>
+              <img src="assets/sshconfig.png" class="img-fluid mb-4 rounded" alt="modification de .ssh/config en locale" />
+              <li>Ensuite, sur votre machine, il suffit de modifier le fichier <code>.ssh/authorized_keys</code> avec votre clé publique, normalement dans <code>.ssh/id_ed25519.pub</code> sur votre système. Vous pouvez aussi utiliser la commande <code>ssh-copy-id</code>. Comme vous pouvez voir ma clé publique ssh est: <code>ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGi2L7EjwYacccrB4eEY5P8sBG7WXWkb6FMM7zbou/0R</code></li>
+              <img src="assets/ssh-demosrv.png" class="img-fluid mb-4 rounded" alt="ssh demosrv" />
+              <li>Copier les fichiers du site vers le serveur NGINX avec la commande SCP, (secure copy) qui permet de simplement copier des fichiers via SSH. Comme vous pouvez le voir sur cette image, nous le faisons depuis le terminal de Visual Studio Code, c'est beaucoup plus simple et c'est gratuit pas comme WebStorm:</li>
+              <pre><code>scp -r * demosrv:/var/www/html/</code></pre>
+              <img src="assets/scp.png" class="img-fluid mb-4 rounded" alt="Déploiement avec SCP" />
+              <li>Vérifier que les fichiers ont été copiés correctement en accédant à l'adresse <code>http://192.168.1.20</code> dans un navigateur :</li>
+              <img src="assets/site.png" class="img-fluid mb-4 rounded" alt="Site déployé" />
+              <li>En raison de problèmes de collaboration sur la machine virtuelle par les membres de l'équipe, et du fait qu'une machine virtuelle peut occuper plusieurs gigaoctets, ce qui rend le partage long, nous avons reproduit ces étapes sur un VPS, dont l'IP est : <code>94.130.181.114</code>. Vous pouvez y accéder via : <a href="http://94.130.181.114/">http://94.130.181.114/</a>.</li>
+              <img src="assets/serveur.png" class="img-fluid mb-4 rounded" alt="Serveur" />
+              <img src="assets/iphone-xr.png" class="img-fluid mb-4 rounded" alt="iPhone XR" />
+          </ol>
+          <p>Avec ces étapes, nous avons installé et configuré NGINX, puis déployé notre site web en utilisant SCP(gratuit et plus rapide).</p>
+          <p>Pour mettre à jour le serveur web, il suffit de relancer la commande suivante. Cela a été fait plusieurs fois, sans problèmes. Vous pouvez vérifier : <code>scp -r * user@demosrv:/var/www/html/</code>.</p>
+          <p><a href="http://94.130.181.114/rapport.pdf">Le rapport en pdf</a></p>
+        </article>
+        <footer class="article-footer mt-5 pt-5 border-top">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex gap-2">
+            <span class="badge bg-secondary">Système</span>
+            </div>
+            <div class="text-muted">
+            <small>Rapport</small>
+            </div>
+        </div>
+        </footer>
+    </div>
+    </div>
+</div>
+</main>
+</body>
+</html>
